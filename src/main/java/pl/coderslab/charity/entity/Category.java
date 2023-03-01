@@ -7,15 +7,11 @@ import javax.persistence.*;
 public class Category {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)
     private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "donation_id")
-    private Donation donation;
 
     public void setId(Long id) {
         this.id = id;
@@ -23,10 +19,6 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setDonation(Donation donation) {
-        this.donation = donation;
     }
 
     public Long getId() {
@@ -37,7 +29,4 @@ public class Category {
         return name;
     }
 
-    public Donation getDonation() {
-        return donation;
-    }
 }

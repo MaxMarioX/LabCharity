@@ -10,14 +10,14 @@ import java.util.List;
 public class Donation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer quantity;
 
-    @OneToMany(mappedBy = "donation")
+    @ManyToMany
     private List<Category> categoryList;
 
-    @OneToOne
+    @ManyToOne
     private Institution institution;
 
     @Column(nullable = false, length = 50)
@@ -29,8 +29,10 @@ public class Donation {
     @Column(nullable = false, length = 50)
     private String zipCode;
 
+    @Column(nullable = false)
     private LocalDate pickUpDate;
 
+    @Column(nullable = false)
     private LocalTime pickUpTime;
 
     private String pickUpComment;
