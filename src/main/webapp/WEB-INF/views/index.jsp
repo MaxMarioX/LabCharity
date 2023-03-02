@@ -8,7 +8,7 @@
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em>13</em>
+            <em>${quantities}</em>
 
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
@@ -75,20 +75,20 @@
 
         <ul class="help--slides-items">
 
-                <c:forEach items="${institutions}" var="institunion" varStatus="status">
+            <c:forEach items="${institutions}" var="institunion" varStatus="status">
 
-                        <c:set var="closeLi" value="0"/>
+                <c:set var="closeLi" value="0"/>
 
-                        <c:if test="${status.count % 2 != 0}"><li></c:if>
-                        <c:if test="${status.count % 2 == 0}"><c:set var="closeLi" value="1"/></c:if>
+                <c:if test="${status.count % 2 != 0}"><li></c:if>
+                <c:if test="${status.count % 2 == 0}"><c:set var="closeLi" value="1"/></c:if>
 
-                        <div class="col">
-                            <div class="title">${institunion.name}</div>
-                            <div class="subtitle">${institunion.description}</div>
-                        </div>
+                <div class="col">
+                    <div class="title">${institunion.name}</div>
+                    <div class="subtitle">${institunion.description}</div>
+                </div>
 
-                        <c:if test="${closeLi == 1}"></li><c:set var="closeLi" value="0"/></c:if>
-                </c:forEach>
+                <c:if test="${closeLi == 1}"></li><c:set var="closeLi" value="0"/></c:if>
+            </c:forEach>
         </ul>
     </div>
 
