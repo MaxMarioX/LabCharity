@@ -51,7 +51,7 @@ h1 {
 /* line 53, scss/vendor/_normalize.scss */
 hr {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -92,7 +92,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -255,7 +255,7 @@ fieldset {
 /* line 240, scss/vendor/_normalize.scss */
 legend {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -293,7 +293,7 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -391,7 +391,7 @@ template {
 /* line 1, scss/modules/_base.scss */
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* line 5, scss/modules/_base.scss */
@@ -519,7 +519,7 @@ form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* line 5, scss/modules/_forms.scss */
@@ -562,8 +562,8 @@ form .form-group--buttons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 /* line 39, scss/modules/_forms.scss */
@@ -593,8 +593,8 @@ form .form-group--checkbox label {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* line 58, scss/modules/_forms.scss */
@@ -742,7 +742,7 @@ form .form-section--checkboxes {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* line 184, scss/modules/_forms.scss */
@@ -756,15 +756,15 @@ form .form-section--columns {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* line 193, scss/modules/_forms.scss */
 form .form-section--columns > div {
   padding-right: 20px;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 /* line 197, scss/modules/_forms.scss */
@@ -780,11 +780,11 @@ form .form-section--columns .form-group label {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* line 210, scss/modules/_forms.scss */
@@ -880,11 +880,11 @@ header .slogan {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* line 29, scss/modules/_header.scss */
@@ -936,8 +936,8 @@ header .slogan--buttons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 80px;
 }
 
@@ -948,8 +948,8 @@ header .slogan--buttons li {
   display: flex;
   width: 100%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-bottom: 0;
 }
 
@@ -962,16 +962,16 @@ header .slogan--buttons li .btn {
 header .slogan--buttons li:nth-child(1) {
   padding-right: 25px;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 /* line 72, scss/modules/_header.scss */
 header .slogan--buttons li:nth-child(2) {
   padding-left: 25px;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 /* line 79, scss/modules/_header.scss */
@@ -981,11 +981,11 @@ header .slogan--steps {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 40px;
 }
 
@@ -1013,8 +1013,8 @@ header .slogan--steps ul {
 header .slogan--steps ul li {
   border: 1px solid #3c3c3c;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 125px;
   height: 125px;
   margin: 0 14px;
@@ -1023,18 +1023,18 @@ header .slogan--steps ul li {
 /* line 106, scss/modules/_header.scss */
 header .slogan--steps ul li > div {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 125px;
   height: 125px;
   font-family: 'Open Sans', sans-serif;
@@ -1067,11 +1067,11 @@ header nav {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 /* line 9, scss/modules/_navigation.scss */
@@ -1118,8 +1118,8 @@ header nav ul.nav--actions .logged-user ul {
   position: absolute;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: right;
   background-color: #fff;
   padding: 12px 0 0;
@@ -1226,10 +1226,10 @@ header nav ul li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 /* line 17, scss/modules/homepage-sections/_steps.scss */
@@ -1239,11 +1239,11 @@ header nav ul li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   padding: 0 35px;
 }
@@ -1311,8 +1311,8 @@ header nav ul li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ebebeb;
   padding: 60px 0;
 }
@@ -1329,11 +1329,11 @@ header nav ul li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -1349,7 +1349,7 @@ header nav ul li:last-of-type {
   width: 200px;
   margin-right: 50px;
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 /* line 30, scss/modules/homepage-sections/_about-us.scss */
@@ -1365,11 +1365,11 @@ header nav ul li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 990px;
   width: 100%;
   padding: 0 30px;
@@ -1425,8 +1425,8 @@ header nav ul li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 35px;
 }
@@ -1495,8 +1495,8 @@ header nav ul li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* line 101, scss/modules/homepage-sections/_help.scss */
@@ -1516,14 +1516,14 @@ footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -1533,18 +1533,18 @@ footer .contact {
   width: 100%;
   padding-right: 30px;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* line 22, scss/modules/_footer.scss */
@@ -1558,8 +1558,8 @@ footer .contact h3 {
 footer .contact form {
   margin-top: 15px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* line 33, scss/modules/_footer.scss */
@@ -1570,7 +1570,7 @@ footer .contact form [type="submit"] {
 /* line 39, scss/modules/_footer.scss */
 footer .bottom-line {
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1606,11 +1606,11 @@ footer .bottom-line--icons a img {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 15px;
   margin: 50px 0;
 }
@@ -1687,7 +1687,7 @@ footer .bottom-line--icons a img {
   font-size: 2rem;
   width: 100%;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 /* line 84, scss/style.scss */
@@ -1702,7 +1702,7 @@ footer .bottom-line--icons a img {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* line 96, scss/style.scss */
@@ -1719,8 +1719,8 @@ footer .bottom-line--icons a img {
 .form--steps form .form-group--buttons {
   margin-top: 40px;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 /* line 109, scss/style.scss */
@@ -1742,7 +1742,7 @@ footer .bottom-line--icons a img {
 /* line 126, scss/style.scss */
 .form--steps form [data-step="6"] {
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 /* line 130, scss/style.scss */
@@ -1751,8 +1751,8 @@ footer .bottom-line--icons a img {
   width: 100%;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* line 136, scss/style.scss */
@@ -1802,8 +1802,8 @@ footer .bottom-line--icons a img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
