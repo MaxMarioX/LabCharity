@@ -164,6 +164,33 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+      if(this.currentStep >= 5) {
+        let firstLi = document.createElement('li');
+
+        let spanIconBag = document.createElement('span');
+        spanIconBag.classList.add("icon");
+        spanIconBag.classList.add("icon-bag");
+
+        let spanSummary = document.createElement('span');
+        spanSummary.classList.add("summary--text");
+
+        firstLi.append(spanIconBag);
+        firstLi.append(spanSummary);
+
+        document.querySelector(".summary .form-section ul").append(firstLi);
+
+        let secondLi = document.createElement('li');
+
+        let spanIconHand = document.createElement('span');
+        spanIconHand.classList.add("icon");
+        spanIconHand.classList.add("icon-hand");
+
+        secondLi.append(spanIconHand);
+        secondLi.append(spanSummary);
+
+        document.querySelector(".summary .form-section ul").append(secondLi);
+
+      }
     }
 
   }
