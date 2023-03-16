@@ -204,15 +204,7 @@
                     <div class="form-section">
                         <h4>Oddajesz:</h4>
                         <ul>
-                            <li>
-                                <span class="icon icon-bag"></span>
-                                <span class="summary--text"></span>
-                            </li>
 
-                            <li>
-                                <span class="icon icon-hand"></span>
-                                <span class="summary--text"></span>
-                            </li>
                         </ul>
                     </div>
 

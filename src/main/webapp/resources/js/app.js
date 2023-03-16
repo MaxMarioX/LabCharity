@@ -174,18 +174,29 @@ document.addEventListener("DOMContentLoaded", function() {
         let firstSpanSummary = document.createElement('span');
         firstSpanSummary.classList.add("summary--text");
 
+        let _bagNumber = 0;
+        let items = "";
+
+        this.$form.querySelectorAll("input[type=\"checkbox\"]:checked").forEach( el => {
+          _bagNumber++;
+          let newVar = el.parentElement.querySelector(".description").textContent;
+          items += newVar + " ";
+        })
+
+        firstSpanSummary.innerText = "Oddajesz " + _bagNumber.toString();
+
+        if(_bagNumber === 1)
+          firstSpanSummary.innerText += " worek: ";
+        else
+          firstSpanSummary.innerText += " worki: ";
+
+        firstSpanSummary.innerText += items;
+
         firstLi.append(spanIconBag);
         firstLi.append(firstSpanSummary);
 
-/*
-        $('input[type=checkbox]').each(function(){
-          if($(this).is(":checked")) {
-            firstSpanSummary.append("TEST");
-          }
-        })
-*/
         document.querySelector(".summary .form-section ul").append(firstLi);
-/*
+
         let secondLi = document.createElement('li');
 
         let spanIconHand = document.createElement('span');
@@ -195,11 +206,18 @@ document.addEventListener("DOMContentLoaded", function() {
         let secondSpanSummary = document.createElement('span');
         secondSpanSummary.classList.add("summary--text");
 
+        let fundationChecked = this.$form.querySelector("input[type=\"radio\"]:checked")
+            .parentElement
+            .querySelector(".description")
+            .querySelector(".title")
+            .textContent;
+
+        secondSpanSummary.innerText = "Dla " + fundationChecked;
+
         secondLi.append(spanIconHand);
         secondLi.append(secondSpanSummary);
 
         document.querySelector(".summary .form-section ul").append(secondLi);
-*/
       }
     }
   }
