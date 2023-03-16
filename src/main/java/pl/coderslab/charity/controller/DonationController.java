@@ -12,13 +12,16 @@ import pl.coderslab.charity.repository.InstitutionRepository;
 @Controller
 public class DonationController {
 
+    DonationRepository donationRepository;
     CategoryRepository categoryRepository;
     InstitutionRepository institutionRepository;
 
-    public DonationController(CategoryRepository categoryRepository, InstitutionRepository institutionRepository)
+    public DonationController(CategoryRepository categoryRepository, InstitutionRepository institutionRepository,
+                              DonationRepository donationRepository)
     {
         this.categoryRepository = categoryRepository;
         this.institutionRepository = institutionRepository;
+        this.donationRepository = donationRepository;
     }
 
     @GetMapping("/donations")
@@ -31,8 +34,9 @@ public class DonationController {
         return "donations";
     }
     @GetMapping("/confirmation")
-    public String showDonationsFormConfirmation(Model model)
+    public String showDonationsFormConfirmation(Donation donation)
     {
+        donationRepository.save(donation);
         return "donations-confirmation";
     }
 

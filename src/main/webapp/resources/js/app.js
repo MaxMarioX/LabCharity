@@ -171,28 +171,37 @@ document.addEventListener("DOMContentLoaded", function() {
         spanIconBag.classList.add("icon");
         spanIconBag.classList.add("icon-bag");
 
-        let spanSummary = document.createElement('span');
-        spanSummary.classList.add("summary--text");
+        let firstSpanSummary = document.createElement('span');
+        firstSpanSummary.classList.add("summary--text");
 
         firstLi.append(spanIconBag);
-        firstLi.append(spanSummary);
+        firstLi.append(firstSpanSummary);
 
+/*
+        $('input[type=checkbox]').each(function(){
+          if($(this).is(":checked")) {
+            firstSpanSummary.append("TEST");
+          }
+        })
+*/
         document.querySelector(".summary .form-section ul").append(firstLi);
-
+/*
         let secondLi = document.createElement('li');
 
         let spanIconHand = document.createElement('span');
         spanIconHand.classList.add("icon");
         spanIconHand.classList.add("icon-hand");
 
+        let secondSpanSummary = document.createElement('span');
+        secondSpanSummary.classList.add("summary--text");
+
         secondLi.append(spanIconHand);
-        secondLi.append(spanSummary);
+        secondLi.append(secondSpanSummary);
 
         document.querySelector(".summary .form-section ul").append(secondLi);
-
+*/
       }
     }
-
   }
   const form = document.querySelector(".form--steps");
   if (form !== null) {

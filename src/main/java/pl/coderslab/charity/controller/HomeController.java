@@ -1,5 +1,6 @@
 package pl.coderslab.charity.controller;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import pl.coderslab.charity.repository.DonationRepository;
 import pl.coderslab.charity.repository.InstitutionRepository;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Optional;
 
 
 @Controller
@@ -30,8 +32,9 @@ public class HomeController {
     @RequestMapping("/")
     public String homeAction(Model model)
     {
-        model.addAttribute("institutions", institutionRepository.findAll());
-        model.addAttribute("quantities", donationRepository.sumQuantities());
+        model.addAttribute("institutions", institutionRepository.findAll(Pageable.ofSize(4)).getContent());
+        model.addAttribute("quantities", donationRepository.sumQuantities().orElse(0L));
+        model.addAttribute("donations", donationRepository.count());
 
         return "index";
     }
