@@ -164,7 +164,20 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
-      if(this.currentStep >= 5) {
+      if(this.currentStep >= 5) { //tu dopisać bool by poniższy kod wykonał się tylko jeden raz
+
+        //Tworzymy strukture
+        let divFormSection = document.createElement('div');
+        divFormSection.classList.add("form-section");
+
+        let h4 = document.createElement('h4');
+        h4.innerText = "Oddajesz: ";
+
+        //Tworzymy listę
+        let ul = document.createElement('ul');
+
+        //Przygotowujemy informacje o tym co użytkownik oddaje
+        //Tworzymy pierwszy element listy
         let firstLi = document.createElement('li');
 
         let spanIconBag = document.createElement('span');
@@ -174,29 +187,34 @@ document.addEventListener("DOMContentLoaded", function() {
         let firstSpanSummary = document.createElement('span');
         firstSpanSummary.classList.add("summary--text");
 
-        let _bagNumber = 0;
+        let bagQuantity = this.$form.querySelector("#quantity").value;
         let items = "";
 
         this.$form.querySelectorAll("input[type=\"checkbox\"]:checked").forEach( el => {
-          _bagNumber++;
           let newVar = el.parentElement.querySelector(".description").textContent;
           items += newVar + " ";
         })
 
-        firstSpanSummary.innerText = "Oddajesz " + _bagNumber.toString();
+        firstSpanSummary.innerText = "Oddajesz " + bagQuantity.toString();
 
-        if(_bagNumber === 1)
+        if(bagQuantity === 1)
           firstSpanSummary.innerText += " worek: ";
         else
           firstSpanSummary.innerText += " worki: ";
 
         firstSpanSummary.innerText += items;
 
+        //Przygotowane powyżej dane dopisujemy do pierwszego elementu listy
         firstLi.append(spanIconBag);
         firstLi.append(firstSpanSummary);
 
-        document.querySelector(".summary .form-section ul").append(firstLi);
+        //Dodajemy pierwsze LI do listy a h4 do div
+        ul.append(firstLi);
+        divFormSection.append(h4);
 
+
+        //Przygotowujemy teraz informację o instytucji
+        //Tworzymy drugie Li
         let secondLi = document.createElement('li');
 
         let spanIconHand = document.createElement('span');
@@ -214,10 +232,84 @@ document.addEventListener("DOMContentLoaded", function() {
 
         secondSpanSummary.innerText = "Dla " + fundationChecked;
 
+        //Przygotowane powyżej dane dopisujemy do drugiego elementu listy
         secondLi.append(spanIconHand);
         secondLi.append(secondSpanSummary);
 
-        document.querySelector(".summary .form-section ul").append(secondLi);
+        //Dodajemy drugie Li
+        ul.append(secondLi);
+        //Gotową już listę ul dopisujemy do div
+        divFormSection.append(ul);
+        //Przygotowany div dodajemy do rodzica .summary
+        document.querySelector(".summary").append(divFormSection);
+
+        //Przygotowujemy strukturę dla adresu odbioru i terminu odbioru
+        let firstDiv = document.createElement('div');
+        firstDiv.classList.add("form-section");
+        firstDiv.classList.add("form-section--columns");
+
+        let secondDiv = document.createElement('div');
+        secondDiv.classList.add("form-section--column");
+
+        let secondH4 = document.createElement('h4');
+        secondH4.innerText = "Adres odbioru: ";
+
+        //Tworzymy listę
+        let secondUl = document.createElement('ul');
+
+        //Przygotowujemy adres odbioru
+        let streetLi = document.createElement('li');
+        streetLi.innerText = this.$form.querySelector("#street").value;
+        let cityLi = document.createElement('li');
+        cityLi.innerText = this.$form.querySelector("#city").value;
+        let zipCodeLi = document.createElement('li');
+        zipCodeLi.innerText = this.$form.querySelector("#zipCode").value;
+
+        //Dopisujemy powyższe dane do listy ul
+        secondUl.append(streetLi);
+        secondUl.append(cityLi);
+        secondUl.append(zipCodeLi);
+
+        //Dodajemy nagłówek h4
+        secondDiv.append(secondH4);
+
+        //Przygotowaną listę ul dopisujemy do div
+        secondDiv.append(secondUl);
+        firstDiv.append(secondDiv);
+
+        //Przygotowujemy termin odbioru
+        let thirdDiv = document.createElement('div');
+        thirdDiv.classList.add("form-section--column");
+
+        let thirdH4 = document.createElement('h4');
+        thirdH4.innerText = "Termin odbioru:";
+
+        //Tworzymy listę
+        let thirdUl = document.createElement('ul');
+
+        //Przygotowujemy dane do odbioru
+        let pickUpDateLi = document.createElement('li');
+        pickUpDateLi.innerText = this.$form.querySelector("#pickUpDate").value;
+        let pickUpTimeLi = document.createElement('li');
+        pickUpTimeLi.innerText = this.$form.querySelector("#pickUpTime").value;
+        let pickUpCommentLi = document.createElement('li');
+        pickUpCommentLi.innerText = this.$form.querySelector("#pickUpComment").value;
+
+        //Dopisujemy powyższe dane do listy ul
+        thirdUl.append(pickUpDateLi);
+        thirdUl.append(pickUpTimeLi);
+        thirdUl.append(pickUpCommentLi);
+
+        //Dodajemy nagłówek h4
+        thirdDiv.append(thirdH4);
+
+        //Przygotowaną listę ul dopisujemy do div
+        thirdDiv.append(thirdUl);
+        firstDiv.append(thirdDiv);
+
+        //Przygotowane div firstDiv dodajemy do rodzica .summary
+        document.querySelector(".summary").append(firstDiv);
+
       }
     }
   }
