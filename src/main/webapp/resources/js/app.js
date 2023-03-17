@@ -199,8 +199,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if(bagQuantity === 1)
           firstSpanSummary.innerText += " worek: ";
-        else
+        else if(bagQuantity >= 2 && bagQuantity <= 4)
           firstSpanSummary.innerText += " worki: ";
+        else
+          firstSpanSummary.innerText += " worków: ";
 
         firstSpanSummary.innerText += items;
 
